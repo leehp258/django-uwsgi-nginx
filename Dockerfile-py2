@@ -17,7 +17,7 @@ FROM ubuntu:16.04
 MAINTAINER Dockerfiles
 
 # Install required packages and remove the apt packages cache when done.
-
+ADD http://mirrors.163.com/.help/sources.list.trusty /etc/apt/sources.list
 RUN apt-get update && \
     apt-get upgrade -y && \ 
     apt-get install -y \
